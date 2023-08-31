@@ -1,4 +1,4 @@
-<div id="footer">
+<div id="footer" class="{{ if or (.Site.Params.fadeIn | default true) .Site.Params.fadeInIndex }}fade-in three{{ end }}">
     <div class="has-text-centered">
     {{ with .Site.Params.footerText }}
         {{ . | markdownify }}
