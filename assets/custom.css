@@ -2653,3 +2653,7 @@ background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAIAAAAC6
 #footer {
   padding: 3rem 1.5rem;
 }
+
+#header-subtitle {
+  margin-bottom: 0.7rem;
+}

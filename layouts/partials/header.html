@@ -10,14 +10,14 @@
             <!-- <h1 class="bold-title {{ if or (.Site.Params.fadeIn | default true) .Site.Params.fadeInIndex }}fade-in one{{ end }}">
                 {{ .Title | markdownify }}
             </h1> -->
-            <div class="subtitle is-5 {{ if or (.Site.Params.fadeIn | default true) .Site.Params.fadeInIndex }}fade-in one{{ end }}">
+            <div id="header-subtitle" class="subtitle is-5 {{ if or (.Site.Params.fadeIn | default true) .Site.Params.fadeInIndex }}fade-in one{{ end }}">
                 {{ .Content }}
             </div>
             <!-- End title and tagline -->
             <!-- Some social icons -->
-            <!--<div class="{{ if or (.Site.Params.fadeIn | default true) .Site.Params.fadeInIndex }}fade-in three{{ end }}">
+            <div class="{{ if or (.Site.Params.fadeIn | default true) .Site.Params.fadeInIndex }}fade-in two{{ end }}">
                 {{ partial "home/social.html" . }}
-            </div>-->
+            </div>
             <!-- End top social icons -->
             <div class="language-nav nav-wrapper fade-in two">
                 <div class="sl-nav">
