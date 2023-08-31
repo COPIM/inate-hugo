@@ -26,7 +26,7 @@ git submodule add https://github.com/COPIM/inate-hugo.git themes/inate
 
 ## License
 
-Copyright (C) 2023 [Copim](https://www.copim.ac.uk)
+Copyright © 2023 [Community-led Open Publishing Infrastructures for Monographs (COPIM)](https://www.copim.ac.uk).
 
 Licensed under the [Apache License, Version 2.0](https://github.com/COPIM/inate-hugo/blob/master/LICENSE) (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at [http://www.apache.org/licenses/LICENSE-2.0](http://www.apache.org/licenses/LICENSE-2.0).
 
