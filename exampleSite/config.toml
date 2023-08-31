@@ -1,32 +1,29 @@
-baseURL                          = "http://example.com/"   # Your domain name. Must end with "/"
-theme                            = "introduction"
+baseURL                          = "https://example.com"   # Your domain name. Must end with "/"
+theme                            = "inate-hugo"
 DefaultContentLanguage           = "en"                    # Default language for multilingual sites
-# disqusshortname                 = ""                     # https://gohugo.io/content-management/comments
-# googleAnalytics                 = ""                     # https://gohugo.io/templates/internal/#google-analytics
 
 [params]
     themeStyle                   = "auto"                  # Choose "light" or "dark" or "auto"
-    favicon                      = "/img/fav.ico"          # Path to favicon file
+    favicon                      = "favicon.ico"           # Path to favicon file
     showMenu                     = true                    # Show navigation menu
     showRSSButton                = false                   # Show rss button in navigation
     fadeIn                       = true                    # Turn on/off the fade-in effect
     fadeInIndex                  = false                   # Turn on/off the fade-in effect on the index page even if fade-in was otherwise turned off
     dateFormat                   = "Jan 2, 2006"
     email                        = "youremail@email.com"   # E-mail address for contact section
-    # customCSS                  = ["foo.css"]             # Include custom css files placed under assets/
-    # customJS                   = ["foo.js"]              # Include custom JavaScript files placed under assets/
-    # plausible                  = true                    # Use Plausible analytics (requires an account at Plausible.io)
+    customCSS                    = ["custom.css"]          # Include custom css files placed under assets/
+    customJS                     = ["slate.js"]            # Include custom JavaScript files placed under assets/
 
     # Configure the home page
     [params.home]
-        introHeight              = "fullheight"            # Input either "medium" or "large" or "fullheight"
-        showLatest               = true                    # Show latest blog post summary
+        introHeight              = "medium"            # Input either "medium" or "large" or "fullheight"
+        showLatest               = false                    # Show latest blog post summary
         showAllPosts             = false                   # Set true to list all posts on home page, or set false to link to separate blog list page
         allPostsArchiveFormat    = true                    # show all posts in an archive format
         numberOfProjectsToShow   = 3                       # Maximum number of projects to show on home page. Unset or comment out to show all projects
-        localTime                = true                    # Show your current local time in contact section
-        timeZone                 = "America/Los_Angeles"   # Your timezone as in the TZ* column of this list: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-        timeFormat               = "en-US"                 # Language specific format to use
+        localTime                = false                    # Show your current local time in contact section
+        timeZone                 = "Europe/London"         # Your timezone as in the TZ* column of this list: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+        timeFormat               = "en-GB"                 # Language specific format to use
     [params.projects]
         useTwoColumns            = false                   # Use a layout with two columns instead of three
 
@@ -57,7 +54,7 @@ DefaultContentLanguage           = "en"                    # Default language fo
     [[params.social]]
         url   = "https://twitter.com/"
         icon  = "twitter" # icon name without the 'fa-'
-        icon_pack = "fab"
+        icon_pack = "x"
     [[params.social]]
         url   = "https://facebook.com/"
         icon  = "facebook-f" # icon name without the 'fa-'
@@ -75,17 +72,39 @@ DefaultContentLanguage           = "en"                    # Default language fo
         icon  = "mastodon" # icon name without the 'fa-'
         icon_pack = "fab"
         html_attributes = "rel=\"me\"" # Add rel attribute for Mastodon profile link verification
+    [[params.social]]
+        url   = "https://github.com/"
+        icon  = "github" # icon name without the 'fa-'
+        icon_pack = "fab"
+    [[params.social]]
+        url   = "https://en.wikipedia.org/"
+        icon  = "wikipedia-w" # icon name without the 'fa-'
+        icon_pack = "fab"
 
+[[ params.nav ]]
+name = "favorites"
+tag = "favorite"
+icon = "star"
 
-# If you don't want to use the default menu, you can define one by yourself
-# [[menu.main]]
-#     name    = "Home"
-#     url     = "/"
-#     weight  = 0
-# [[menu.main]]
-#     name    = "Blog"
-#     url     = "/blog/"
-#     weight  = 1
+[[ params.nav ]]
+name = "search"
+tag = "search"
+icon = "search"
+
+[[ params.nav ]]
+name = "shopping"
+tag = "shopping"
+icon = "shopping-basket"
+
+[[ params.nav ]]
+name = "music"
+tag = "music"
+icon = "headphones"
+
+[[ params.nav ]]
+name = "video"
+tag = "video"
+icon = "video-camera"
 
 # We only use tag as a taxonomies
 # You can add more by yourself
@@ -113,7 +132,7 @@ DefaultContentLanguage           = "en"                    # Default language fo
 [languages]
     [languages.en]
         languageName     = "English"
-        languageCode     = "en-us"
+        languageCode     = "en-GB"
         contentDir       = "content/en"
         weight           = 0
         title            = "Introduction"
