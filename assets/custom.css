@@ -2655,5 +2655,12 @@ background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAIAAAAC6
 }
 
 #header-subtitle {
-  margin-bottom: 0.7rem;
+  margin: 0.8rem 9rem 0.7rem 9rem;
+  padding: 0;
+}
+
+@media screen and (max-width: 769px),print {
+  #header-subtitle {
+    margin: 0.8rem 0 0.7rem 0;
+  }
 }

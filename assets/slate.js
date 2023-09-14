@@ -1595,8 +1595,19 @@ var Color = tinycolor,
         });
       
         // Toggle the targeted section's visibility
-        const targetSection = document.getElementById(location.hash.slice(1));
-        targetSection.style.display = targetSection.style.display === "none" ? "block" : "none";
+        const hashValue = location.hash.slice(1);
+        const targetSection = document.getElementById(hashValue);
+        
+        if (hashValue === "") {
+            // Hash is empty, toggle the .header-subtitle div
+            const headerSubtitle = document.getElementById('header-subtitle');
+            headerSubtitle.style.display = headerSubtitle.style.display === "none" ? "block" : "none";
+            // Remove the classes 'fade-in' and 'two' from .header-subtitle
+            headerSubtitle.classList.remove('fade-in', 'two');
+        } else if (targetSection) {
+          // Hash is not empty, toggle the section corresponding to the hash
+          targetSection.style.display = targetSection.style.display === "none" ? "block" : "none";
+        }
     };
 
 window.onhashchange = function() {
