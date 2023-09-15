@@ -1609,10 +1609,39 @@ var Color = tinycolor,
           targetSection.style.display = targetSection.style.display === "none" ? "block" : "none";
         }
     };
+    changeTileColors = function(color) {
+        // Get all <a> elements with the class "shuffle-item--visible"
+        const visibleLinks = document.querySelectorAll('a.shuffle-item--visible');
+
+        // Loop through each <a> element
+        visibleLinks.forEach((link) => {
+            // Find the child <div> element with the class "tile-box"
+            const tileBox = link.querySelector('.tile-box');
+                
+            // Check if a child <div> with class "tile-box" exists within the <a> element
+            if (tileBox) {
+                // Change the color of the box-shadow for the found <div> element
+                tileBox.style.boxShadow = `inset 0.1rem 0.1rem ${color}`; // Change the color to green (hex code: #00FF00)
+            }
+        });
+    };
 
 window.onhashchange = function() {
     filterTiles();
     displaySection();
+    if (location.hash.slice(1) === 'organisations') {
+        color = '#D92B85';
+        changeTileColors(color);
+    } else if (location.hash.slice(1) === 'toolkits') {
+        color = '#B398FF';
+        changeTileColors(color);
+    } else if (location.hash.slice(1) === 'documentation') {
+        color = 'black';
+        changeTileColors(color);
+    } else if (location.hash.slice(1) === 'software') {
+        color = '#1B7F36';
+        changeTileColors(color);
+    };
 };
 
 var getUrlParts = function(t) {
