@@ -48,8 +48,8 @@
 
         <!-- Range through all sections in /home execept socials.md -->
         <div class="section" id="{{ .File.TranslationBaseName }}" style="display: none;">
-            <div>
-                <h2 class="title is-2 has-text-centered">{{ .Title | markdownify }}</h2>
+            <div class="has-text-centered">
+                <h2 class="title is-2 has-text-centered" style="box-shadow: inset 0.1rem 0.1rem {{ .Params.Category_color | safeCSS }};">{{ .Title | markdownify }}</h2>
                 {{ if .Params.Image }}
                 <div class="columns">
                     <div class="column is-one-third has-text-centered">
@@ -80,7 +80,7 @@
         {{ with .Resources.GetMatch "socials.md" }}
         <div class="section" id="{{ .File.TranslationBaseName }}" style="display: none;">
             <div class="has-text-centered">
-                <h2 class="title is-2">{{ .Title | markdownify }}</h2>
+                <h2 class="title is-2 text-highlight-social">{{ .Title | markdownify }}</h2>
                 <div class="markdown">
                     {{ .Content }}
                 </div>
