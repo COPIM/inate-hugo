@@ -1693,7 +1693,8 @@ var getUrlParts = function(t) {
         //var e = t.getAttribute("data-bg-color");
         //e || (e = "rgba(255,255,255,.8)"), e = Color(e), e.setAlpha(.8), t.style.backgroundColor = e;
         var i = new Image;
-        i.src = t.getAttribute("data-img"), i.className = "logo", t.appendChild(i)
+        var logo_name = t.getAttribute("data-title");
+        i.src = t.getAttribute("data-img"), i.className = "logo", i.alt = "logo for " + logo_name, t.appendChild(i)
     },
     renderPlainTile = function(t) {
         var e = getUrlParts(t.getAttribute("data-url"));

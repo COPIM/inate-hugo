@@ -7,7 +7,7 @@
         {{ if .Link.txt_color }}data-txt-color='{{ .Link.txt_color | safeCSS }}'{{ end -}}
         {{ if .Link.img }}data-img='{{ .Link.img }}'{{ end -}}
         >
-        {{ if .Link.img }}<img class="logo" src="{{ .Link.img }}"></img>{{ else }}{{ .Link.name }}{{ end }}</div>
+        {{ if .Link.img }}<img class="logo" src="{{ .Link.img }}" alt="logo for {{ .Link.name }}"></img>{{ else }}{{ .Link.name }}{{ end }}</div>
     {{ if .Link.img }}
     <div class="tile-title">
         {{ .Link.name }}
