@@ -1621,7 +1621,7 @@ var Color = tinycolor,
             // Check if a child <div> with class "tile-box" exists within the <a> element
             if (tileBox) {
                 // Change the color of the box-shadow for the found <div> element
-                tileBox.style.boxShadow = `inset 0.1rem 0.1rem ${color}`; // Change the color to green (hex code: #00FF00)
+                tileBox.style.boxShadow = `inset 0.2rem 0.2rem ${color}`;
             }
         });
     };
@@ -1629,17 +1629,17 @@ var Color = tinycolor,
 window.onhashchange = function() {
     filterTiles();
     displaySection();
-    if (location.hash.slice(1) === 'organisations') {
+    if (location.hash.slice(1) === 'initiatives') {
         color = '#D92B85';
         changeTileColors(color);
-    } else if (location.hash.slice(1) === 'toolkits') {
+    } else if (location.hash.slice(1) === 'resources') {
         color = '#B398FF';
         changeTileColors(color);
     } else if (location.hash.slice(1) === 'documentation') {
         color = 'black';
         changeTileColors(color);
     } else if (location.hash.slice(1) === 'software') {
-        color = '#1B7F36';
+        color = '#54aa38';
         changeTileColors(color);
     };
 };

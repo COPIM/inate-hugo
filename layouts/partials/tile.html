@@ -1,6 +1,6 @@
 <a class="tile tile-link" href="{{ .Link.url }}" data-groups='{{ if .Link.tags }}{{ delimit .Link.tags "," }}{{ end }}'{{ if .Jump }} target="_blank"{{ end }}>
     <div class="tile-box" 
-        style="box-shadow: inset 0.1rem 0.1rem {{ .Link.category_color | safeCSS }}; {{ if or .Link.bg_color .Link.txt_color }}{{ if .Link.bg_color }}background-color:{{ .Link.bg_color | safeCSS }};{{ end }} {{ if .Link.txt_color }}color:{{ .Link.txt_color | safeCSS }}{{end}}{{ end -}}"
+        style="box-shadow: inset 0.2rem 0.2rem {{ .Link.category_color | safeCSS }}; {{ if or .Link.bg_color .Link.txt_color }}{{ if .Link.bg_color }}background-color:{{ .Link.bg_color | safeCSS }};{{ end }} {{ if .Link.txt_color }}color:{{ .Link.txt_color | safeCSS }}{{end}}{{ end -}}"
         data-title='{{ .Link.name }}'
         data-url='{{ .Link.url }}'
         {{ if .Link.bg_color }}data-bg-color='{{ .Link.bg_color | safeCSS }}'{{ end -}}

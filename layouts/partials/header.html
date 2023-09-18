@@ -6,7 +6,9 @@
     <div class="hero-body">
         <div class="has-text-centered">
             <!-- Title and tagline -->
-            <img class="logo-image {{ if or (.Site.Params.fadeIn | default true) .Site.Params.fadeInIndex }}fade-in one{{ end }}" src="/logos/copim-logo.png" alt="{{ .Title | markdownify }}">
+            <a href="#">
+              <img class="logo-image {{ if or (.Site.Params.fadeIn | default true) .Site.Params.fadeInIndex }}fade-in one{{ end }}" src="/logos/copim-logo.png" alt="{{ .Title | markdownify }}">
+            </a>
             <!-- <h1 class="bold-title {{ if or (.Site.Params.fadeIn | default true) .Site.Params.fadeInIndex }}fade-in one{{ end }}">
                 {{ .Title | markdownify }}
             </h1> -->
