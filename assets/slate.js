@@ -1609,7 +1609,7 @@ var Color = tinycolor,
           targetSection.style.display = targetSection.style.display === "none" ? "block" : "none";
         }
     };
-    changeTileColors = function(color) {
+    changeTileColors = function() {
         // Get all <a> elements with the class "shuffle-item--visible"
         const visibleLinks = document.querySelectorAll('a.shuffle-item--visible');
 
@@ -1620,8 +1620,18 @@ var Color = tinycolor,
                 
             // Check if a child <div> with class "tile-box" exists within the <a> element
             if (tileBox) {
-                // Change the color of the box-shadow for the found <div> element
-                tileBox.style.boxShadow = `inset 0.2rem 0.2rem ${color}`;
+                // Get the current class attribute value
+                const classes = tileBox.className.split(' ');
+
+                // Iterate through the classes and remove those that match the pattern
+                classes.forEach((className) => {
+                    if (className.startsWith('highlight-')) {
+                        tileBox.classList.remove(className);
+                    }
+                });
+
+                // Add the new CSS class with the title-cased color
+                tileBox.classList.add(`highlight-${location.hash.slice(1).charAt(0).toUpperCase() + location.hash.slice(1).slice(1)}`);
             }
         });
     };
@@ -1629,18 +1639,8 @@ var Color = tinycolor,
 window.onhashchange = function() {
     filterTiles();
     displaySection();
-    if (location.hash.slice(1) === 'initiatives') {
-        color = '#D92B85';
-        changeTileColors(color);
-    } else if (location.hash.slice(1) === 'resources') {
-        color = '#B398FF';
-        changeTileColors(color);
-    } else if (location.hash.slice(1) === 'documentation') {
-        color = 'black';
-        changeTileColors(color);
-    } else if (location.hash.slice(1) === 'software') {
-        color = '#54aa38';
-        changeTileColors(color);
+    if (location.hash.slice(1) === 'initiatives' || location.hash.slice(1) === 'resources' || location.hash.slice(1) === 'documentation' || location.hash.slice(1) === 'software') {
+        changeTileColors();
     };
 };
 
