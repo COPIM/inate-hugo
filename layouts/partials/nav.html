@@ -1,7 +1,7 @@
 <div class="nav-panel {{ if or (.Site.Params.fadeIn | default true) .Site.Params.fadeInIndex }}fade-in two{{ end }}">
     <nav>
         <ul>
-            <li class="tag"><a data-tooltip="reset" href="#" aria-hidden="true" aria-label="menu item to reset to home page"><i class="icon fa fa-home" aria-hidden="true"></i></a></li>
+            <li class="tag"><a data-tooltip="home" href="#" aria-hidden="true" aria-label="menu item to reset to home page"><i class="icon fa fa-home" aria-hidden="true"></i></a></li>
 {{ range .Site.Params.nav }}            {{ partial "nav_item.html" . }}{{- end }}
         </ul>
     </nav>
