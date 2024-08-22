@@ -20,10 +20,5 @@
           <i class="{{ .icon_pack}} ai-{{ .icon}} ai-1.9x"></i>
         </a>
       {{ end }}
-      {{ if eq .icon_pack "x" }}
-      <a href="{{ .url }}" {{ .html_attributes | safeHTMLAttr }} aria-hidden="true" aria-label="link to {{ .name }}" target="_blank">
-        <span class="fab">𝕏</span>
-      </a>
-      {{ end }}
   {{ end }}
 </div>
